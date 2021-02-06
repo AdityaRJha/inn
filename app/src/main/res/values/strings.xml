@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Prototype 1</string>
+    <string name="hint_email">Email</string>
+    <string name="password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="sign_upText">No account? SignUp</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="button_signUp">Sign Up</string>
+    <string name="login_text">Already have an account? Login</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="hint_search">Search</string>
+    <string name="button_logout">LOGOUT</string>
+    <string name="new_activity">to write new activities</string>
+    <string name="home_titlebar">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
