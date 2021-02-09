@@ -89,6 +89,19 @@
                 android:onClick="goToSignUp"
                 android:text="@string/sign_upText" />
 
+            <TextView
+                android:id="@+id/forgetPasswordTV"
+                style="@style/LinkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signUpTV"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/grid_2x"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="goToForgotPassword"
+                android:text="@string/forgot_password_reset_textView" />
+
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 

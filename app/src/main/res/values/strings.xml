@@ -16,4 +16,7 @@
     <string name="home_titlebar">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password_reset_textView">Forgot Password? Reset</string>
+    <string name="reset_button">RESET</string>
+    <string name="login_text_if">Login</string>
 </resources>

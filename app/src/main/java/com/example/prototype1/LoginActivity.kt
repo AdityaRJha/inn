@@ -3,7 +3,6 @@
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,12 +10,12 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import java.lang.Exception
 
 class LoginActivity : AppCompatActivity() {
 
@@ -58,6 +57,8 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 
+
+
     fun onLogin(v: View){
         var proceed = true
         if(emailET.text.isNullOrEmpty()){
@@ -77,16 +78,29 @@ class LoginActivity : AppCompatActivity() {
                     if (!task.isSuccessful) {
                         loginProgressLayout.visibility = View.GONE
                         Toast.makeText(this@LoginActivity, "Login error: Either the username or password is wrong.", Toast.LENGTH_SHORT).show()
+                    }else{
+
+                        Toast.makeText(this, "Successfully Logged in", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, HomeActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                 }.addOnFailureListener{e: Exception ->
                     e.printStackTrace()
                     loginProgressLayout.visibility = View.GONE
                 }
+
         }
     }
 
     fun goToSignUp(v: View){
         startActivity(SignUpActivity.newIntent(this))
+        finish()
+    }
+
+    fun goToForgotPassword(v: View){
+        startActivity(ForgotPasswordActivity.newIntent(this))
+        Toast.makeText(this@LoginActivity, "Don't worry your password would be restored.", Toast.LENGTH_SHORT).show()
         finish()
     }
 
